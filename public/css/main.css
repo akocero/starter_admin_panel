@@ -57,6 +57,10 @@ img {
   font-size: 1.4rem;
 }
 
+.text--xxs {
+  font-size: 1rem;
+}
+
 .grid, [class*="grid-auto-"] {
   display: grid;
   grid-gap: var(--grid-gap, 0);
