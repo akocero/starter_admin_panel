@@ -1,5 +1,6 @@
 @import './abstract/variables';
 @import './abstract/mixins';
+@import './abstract/utils';
 
 @import './base/reset';
 @import './base/typography';
@@ -11,7 +12,8 @@
 @import './components/forms';
 @import './components/alerts';
 @import './components/sidebar';
-@import './abstract/utils';
+
+@import './abstract/helpers';
 
 .main {
   padding: 5.8rem 0 0 25rem;

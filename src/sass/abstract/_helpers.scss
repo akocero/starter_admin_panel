@@ -1,0 +1,80 @@
+$spaceAmounts: (0, 1, 2, 3, 4, 5, 6, 7);
+
+@each $space in $spaceAmounts {
+	.m--#{$space} {
+		margin: #{$space}rem;
+	}
+
+	.mx--#{$space}{
+		margin: 0 #{$space}rem;
+	}
+
+	.my--#{$space} {
+		margin: #{$space}rem 0;
+	}
+
+	.ml--#{$space}{
+		margin-left: #{$space}rem;
+	}
+
+	.mr--#{$space}{
+		margin-right: #{$space}rem;
+	}
+
+	.mb--#{$space}{
+		margin-bottom: #{$space}rem;
+	}
+
+	.mt--#{$space}{
+		margin-top: #{$space}rem;
+	}
+
+
+	.p-#{$space} {
+		padding: #{$space}rem;
+	}
+
+	.px-#{$space}{
+		padding: 0 #{$space}rem;
+	}
+
+	.py-#{$space} {
+		padding: #{$space}rem 0;
+	}
+
+	.pl-#{$space}{
+		padding-left: #{$space}rem;
+	}
+
+	.pr-#{$space}{
+		padding-right: #{$space}rem;
+	}
+
+	.pb-#{$space}{
+		padding-bottom: #{$space}rem;
+	}
+
+	.pt-#{$space}{
+		padding-top: #{$space}rem;
+	}
+}
+
+
+.shadow {
+	border: none;
+	&--sm {
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	}
+
+	&--md {
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	}
+
+	&--lg {
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+
+	&--xl {
+		box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	}
+}
