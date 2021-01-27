@@ -1,0 +1,17 @@
+.card {
+    padding: 1.5rem;
+    border-radius: $border-raduis;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    &__img {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 2px;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+    }
+}

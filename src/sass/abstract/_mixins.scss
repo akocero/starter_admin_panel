@@ -1,0 +1,34 @@
+// Media Query Manager
+
+// 0 - 600px Phone
+// 600 - 900px Tablet Portrait
+// 900 - 1200px Tablet Landscape
+// [1200 - 1800] is where our normal styles apply
+// 1800px Plus Big Desktop
+
+// $break-point argument choices
+// -phone
+// -tablet-portrait
+// -tablet-landscape
+// -big-desktop
+
+// 1em = 16px
+
+// formula to get the px value to ems
+
+// px value / by 16px = (default brawser font-size)
+// 600px / 16px = 37.5 em
+@mixin respond($break-point) {
+    @if $break-point == phone {
+        @media (max-width: 37.5em) { @content }; //600px
+    }
+    @if $break-point == tab-port {
+        @media (max-width: 56.25em) { @content }; //900px
+    }
+    @if $break-point == tab-land {
+        @media (max-width: 75em) { @content }; //1200px
+    }
+    @if $break-point == big-desktop {
+        @media (max-width: 112.5em) { @content }; //1800px
+    }
+}

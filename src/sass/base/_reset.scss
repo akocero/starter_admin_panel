@@ -1,0 +1,32 @@
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //10px 10px / .16 = 62.5%
+    //10px will be our default rems so that if we decalare 5rem it will be 50px it is much easy
+    //to calculate the size of your rems or font-sizes
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Open sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    box-sizing: border-box;
+    color: $font-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}

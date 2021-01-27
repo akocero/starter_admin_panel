@@ -1,0 +1,107 @@
+.navbar {
+    font-size: 1.4rem;
+    height: 5.8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    border-bottom: 1px solid $border-color;
+    padding: 0 3rem;
+    a {
+        color: $dark;
+    }
+    &__brand {
+        font-size: 2.2rem;
+    }
+
+
+    &__list {
+        display: flex;
+        
+        @include respond(tab-port) {
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: -100%;
+            left: 0;
+            background-color: $dark;
+            transition: top .4s ease;
+            font-size: 3rem;
+            &.show {
+                top: 0;
+            }
+        }
+        
+    }
+
+    &__item {
+        margin: 0 1.2rem;
+        
+    }
+
+    &__link {
+        letter-spacing: 0.6px;
+    }
+
+    &__toggler {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 6.2rem;
+        width: 3.4rem;
+        top: 0;
+        right: 3rem;
+        cursor: pointer;
+        
+        display: none;
+
+        @include respond(tab-port) {
+            display: flex;
+        }
+
+        &>* {
+            height: 2px;
+            width: 100%;
+            background-color: white;
+            margin: 3px 0;
+            transition: all .2s ease-in;
+        }
+
+        &.show {
+            
+            & :nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+
+            & :nth-child(2) {
+                transform: translateX(100px);
+            }
+
+             & :nth-child(3) {
+                
+                transform: rotate(-45deg) translate(5px, -7px);
+            }
+        
+        } 
+    }
+
+
+    &--dark {
+        background-color: $dark;
+        color: white;
+
+        a {
+            color: white;
+        }
+    }
+
+    
+    
+}

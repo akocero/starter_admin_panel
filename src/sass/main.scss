@@ -1,0 +1,25 @@
+@import './abstract/variables';
+@import './abstract/mixins';
+
+@import './base/reset';
+@import './base/typography';
+
+@import './layout/grid_system';
+@import './components/navbar';
+@import './components/buttons';
+@import './components/cards';
+@import './components/forms';
+@import './components/alerts';
+@import './components/sidebar';
+@import './abstract/utils';
+
+.main {
+  padding: 5.8rem 0 0 25rem;
+}
+
+.child {
+  background-color: violet;
+  height: 4rem;
+}
+
+

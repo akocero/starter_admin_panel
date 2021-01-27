@@ -1,0 +1,26 @@
+.alert {
+    padding: 1.5rem;
+    color: $dark;
+    border: 1px solid rgb(224, 224, 224);
+    font-size: 1.6rem;
+    border-radius: $border-raduis;
+    margin-bottom: 1rem;
+
+    &--danger {
+        color: white;
+        background-color: $danger-color;
+        border: none;
+    }
+
+    &--warning {
+        color: white;
+        background-color: $warning-color;
+        border: none;
+    }
+
+    &--info {
+        color: white;
+        background-color: $info-color;
+        border: none;
+    }
+}

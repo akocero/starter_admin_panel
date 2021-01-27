@@ -1,0 +1,112 @@
+.btn {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1.2rem 2.2rem;
+    font-weight: 500;
+    border: none;
+    border-radius: $border-raduis;
+    text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+    outline: none;
+    
+
+    &--flat {
+        border-radius: 0;
+    }
+
+    &--rounded {
+        border-radius: 5rem;
+    }
+
+    &:hover {
+        // box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        // color: #fff;
+        transform: translateY(-3px);
+    }
+
+    &--primary {
+        background-color: $primary-color;
+        color: $light;
+
+        &:hover {
+            background-color: lighten($primary-color, 10);
+            box-shadow: 0px 15px 20px rgba($primary-color, 0.4);
+        }
+    }
+
+    &--secondary {
+        background-color: $secondary-color;
+        color: $light;
+
+        &:hover {
+            background-color: darken($secondary-color, 10);
+            box-shadow: 0px 15px 20px rgba($secondary-color, 0.4);
+        }
+    }
+
+    &--success {
+        background-color: $success-color;
+        color: $light;
+
+        &:hover {
+            background-color: darken($success-color, 2);
+            box-shadow: 0px 15px 20px rgba($success-color, 0.4);
+        }
+    }
+
+    &--info {
+        background-color: $info-color;
+        color: $light;
+
+        &:hover {
+            background-color: darken($info-color, 10);
+            box-shadow: 0px 15px 20px rgba($info-color, 0.4);
+        }
+    }
+
+    &--danger {
+        background-color: $danger-color;
+        color: $light;
+
+        &:hover {
+            background-color: darken($danger-color, 5);
+            box-shadow: 0px 15px 20px rgba($danger-color, 0.4);
+        }
+    }
+
+    &--warning {
+        background-color: $warning-color;
+        color: $light;
+
+        &:hover {
+            background-color: lighten($warning-color, 5);
+            box-shadow: 0px 15px 20px rgba($warning-color, 0.4);
+        }
+    }
+
+    &--dark {
+        background-color: $dark;
+        color: $light;
+
+        &:hover {
+            background-color: darken($dark, 10);
+            box-shadow: 0px 15px 20px rgba($dark, 0.4);
+        }
+    }
+
+    &--light {
+        background-color: $light;
+        border: 1px solid darken($light, 2);
+        color: $dark;
+
+        &:hover {
+            background-color: lighten($light, 10);
+            box-shadow: 0px 15px 20px rgba(rgb(172, 172, 172), 0.4);
+        }
+        
+    }
+
+}

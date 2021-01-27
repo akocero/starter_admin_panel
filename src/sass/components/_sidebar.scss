@@ -1,0 +1,93 @@
+.sidebar {
+    width: 25rem;
+    margin-top: 5.8rem;
+    height: calc(100vh - 5.8rem);
+    position: fixed;
+    background-color: white;
+    border-right: 1px solid $border-color;
+    padding: 2rem 1.7rem;
+    
+    overflow-y: auto;
+
+    /* width */
+    &::-webkit-scrollbar {
+    width: 0.6rem;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+    background: white;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+    background: rgb(231, 231, 231);
+    border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: grey;
+        width: 10px;
+    }
+    
+}
+
+.nav {
+    // background-color: black;
+    
+    // height: 100%;
+    // margin-bottom: 6rem;
+    // background-color: red;
+    &__dropdown {
+        font-size: 1.4rem;
+        // font-weight: 500;
+        color: $dark;
+        letter-spacing: 0.6px;
+        display: flex;
+        padding: 0.6rem 1rem;
+        margin-bottom: 1rem;
+        // border: 1px solid grey;
+        border-radius: $border-raduis;
+
+        & :nth-child(1) {
+            margin-left: auto;
+            transition: all .2s ease;
+            color: lighten($dark, 30) ;
+            &.show {
+                transform: rotate(-180deg);
+            }
+        }
+
+        &:hover {
+            background-color: rgba($primary-color, .10);
+        }
+    }
+
+    &__list {
+        padding-left:1.5rem;
+        margin-left: 2.5rem;
+        border-left: 2px solid rgba($primary-color, .10);
+        display: none;
+        transition: all .3s ease;
+        &.show {
+            display: block;
+        }
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        letter-spacing: 0.6px;
+        font-size: 1.25rem;
+        color: lighten($dark, 10);
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: grey;
+    }
+}
