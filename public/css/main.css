@@ -989,7 +989,15 @@ select:focus {
 }
 
 .sidebar.hide {
-  width: 7rem;
+  width: 4rem;
+}
+
+.sidebar.hide .nav__dropdown {
+  display: none;
+}
+
+.sidebar.hide .nav__icon {
+  display: none;
 }
 
 .sidebar-toggler {
@@ -1016,7 +1024,11 @@ select:focus {
 }
 
 .sidebar-toggler.hide {
-  left: 5.5rem;
+  left: 2.5rem;
+}
+
+.nav {
+  width: 100%;
 }
 
 .nav__dropdown {
@@ -1026,15 +1038,13 @@ select:focus {
   display: flex;
   height: 3rem;
   align-items: center;
-  padding: 0 1rem;
   margin-bottom: 1rem;
   word-wrap: no-wrap;
-  width: 100%;
   border-radius: 4px;
 }
 
 .nav__dropdown :nth-child(1) {
-  padding-right: 1rem;
+  margin: 0 1rem;
   transition: all .2s ease;
   color: gray;
 }
@@ -1043,13 +1053,13 @@ select:focus {
   transform: rotate(-180deg);
 }
 
-.nav__dropdown :nth-child(2) {
+.nav__dropdown :nth-child(3) {
   margin-left: auto;
   transition: all .2s ease;
   color: gray;
 }
 
-.nav__dropdown :nth-child(2).show {
+.nav__dropdown :nth-child(3).show {
   transform: rotate(-180deg);
 }
 
@@ -1086,8 +1096,8 @@ select:focus {
 }
 
 .nav__icon_temp {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
   fill: grey;
 }
 
@@ -1629,7 +1639,7 @@ small {
 }
 
 .main.expand {
-  padding-left: 7rem;
+  padding-left: 4rem;
 }
 
 .child {

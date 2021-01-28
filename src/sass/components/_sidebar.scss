@@ -34,7 +34,15 @@
     }
 
     &.hide {
-        width: 7rem;
+        width: 4rem;
+
+        .nav__dropdown {
+            display: none;
+        }
+
+        .nav__icon {
+            display: none;
+        }
     }
     
 }
@@ -63,13 +71,13 @@
     }
 
     &.hide {
-        left: 5.5rem;
+        left: 2.5rem;        
     }
 }
 
 .nav {
     // background-color: black;
-    
+    width: 100%;
     // height: 100%;
     // margin-bottom: 6rem;
     // background-color: red;
@@ -81,15 +89,14 @@
         display: flex;
         height: 3rem;
         align-items: center;
-        padding: 0 1rem;
         margin-bottom: 1rem;
         word-wrap: no-wrap;
-        width: 100%;
+        // padding: 0 1rem;
         // border: 1px solid grey;
         border-radius: $border-raduis;
 
         & :nth-child(1) {
-            padding-right: 1rem;
+            margin: 0 1rem;
             transition: all .2s ease;
             color: lighten($dark, 30) ;
             &.show {
@@ -97,7 +104,7 @@
             }
         }
 
-        & :nth-child(2) {
+        & :nth-child(3) {
             margin-left: auto;
             transition: all .2s ease;
             color: lighten($dark, 30);
@@ -139,8 +146,8 @@
     }
 
     &__icon_temp {
-        height: 2.5rem;
-        width: 2.5rem;
+        height: 1.5rem;
+        width: 1.5rem;
         fill: grey;
     }
 }

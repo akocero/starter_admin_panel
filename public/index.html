@@ -46,8 +46,10 @@
                         <svg class="nav__icon_temp">
                             <use xlink:href="images/sprite.svg#icon-folder"></use>
                         </svg>
-
-                        Dashboard
+                        <span class="nav__text">
+                            Dashboard
+                        </span>
+                        
 
                         <svg class="nav__icon">
                             <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
@@ -284,6 +286,10 @@
             eg_sidebar.classList.toggle('hide');
             eg_sidebar_toggler.classList.toggle('hide');
             eg_main.classList.toggle('expand');
+
+            eg_nav_dropdown.forEach((eg_item) => {
+                eg_item.nextElementSibling.classList.remove('show');
+            });
         })
 
         
