@@ -1,31 +1,31 @@
 $spaceAmounts: (0, 1, 2, 3, 4, 5, 6, 7);
 
 @each $space in $spaceAmounts {
-	.m--#{$space} {
+	.m-#{$space} {
 		margin: #{$space}rem;
 	}
 
-	.mx--#{$space}{
+	.mx-#{$space}{
 		margin: 0 #{$space}rem;
 	}
 
-	.my--#{$space} {
+	.my-#{$space} {
 		margin: #{$space}rem 0;
 	}
 
-	.ml--#{$space}{
+	.ml-#{$space}{
 		margin-left: #{$space}rem;
 	}
 
-	.mr--#{$space}{
+	.mr-#{$space}{
 		margin-right: #{$space}rem;
 	}
 
-	.mb--#{$space}{
+	.mb-#{$space}{
 		margin-bottom: #{$space}rem;
 	}
 
-	.mt--#{$space}{
+	.mt-#{$space}{
 		margin-top: #{$space}rem;
 	}
 
@@ -62,19 +62,19 @@ $spaceAmounts: (0, 1, 2, 3, 4, 5, 6, 7);
 
 .shadow {
 	border: none;
-	&--sm {
+	&-sm {
 		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	}
 
-	&--md {
+	&-md {
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	}
 
-	&--lg {
+	&-lg {
 		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	}
 
-	&--xl {
+	&-xl {
 		box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 	}
 }
