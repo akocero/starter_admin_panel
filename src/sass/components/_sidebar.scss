@@ -6,8 +6,10 @@
     background-color: white;
     border-right: 1px solid $border-color;
     padding: 2rem 1.7rem;
-    
+    overflow-x: hidden;
     overflow-y: auto;
+
+    transition: all .3s ease;
 
     /* width */
     &::-webkit-scrollbar {
@@ -30,7 +32,39 @@
         background: grey;
         width: 10px;
     }
+
+    &.hide {
+        width: 7rem;
+    }
     
+}
+
+.sidebar-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 6rem;
+    border: 1px solid $border-color;
+    position: fixed;
+    left: 23.5rem;
+    top: 7rem;
+    z-index: 1000;    
+
+    transition: all .3s ease;
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: grey;
+        transform: rotate(90deg);
+    }
+
+    &.hide {
+        left: 5.5rem;
+    }
 }
 
 .nav {
@@ -45,15 +79,28 @@
         color: $dark;
         letter-spacing: 0.6px;
         display: flex;
-        padding: 0.6rem 1rem;
+        height: 3rem;
+        align-items: center;
+        padding: 0 1rem;
         margin-bottom: 1rem;
+        word-wrap: no-wrap;
+        width: 100%;
         // border: 1px solid grey;
         border-radius: $border-raduis;
 
         & :nth-child(1) {
-            margin-left: auto;
+            padding-right: 1rem;
             transition: all .2s ease;
             color: lighten($dark, 30) ;
+            &.show {
+                transform: rotate(-180deg);
+            }
+        }
+
+        & :nth-child(2) {
+            margin-left: auto;
+            transition: all .2s ease;
+            color: lighten($dark, 30);
             &.show {
                 transform: rotate(-180deg);
             }
@@ -88,6 +135,12 @@
     &__icon {
         height: 2rem;
         width: 2rem;
+        fill: grey;
+    }
+
+    &__icon_temp {
+        height: 2.5rem;
+        width: 2.5rem;
         fill: grey;
     }
 }

@@ -34,10 +34,18 @@
         </div>
     </nav>
     <div class="wrapper">
+        <a class="sidebar-toggler" href="#!">
+            <svg class="sidebar-toggler__icon">
+                <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
+            </svg>
+        </a>
         <div class="sidebar">
             <ul class="nav">
                 <li>
                     <a href="#" class="nav__dropdown">
+                        <svg class="nav__icon_temp">
+                            <use xlink:href="images/sprite.svg#icon-folder"></use>
+                        </svg>
 
                         Dashboard
 
@@ -52,67 +60,7 @@
                         <li class="nav__item"><a href="" class="nav__link">Minimal</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#" class="nav__dropdown">
-                        Pages
-                        <svg class="nav__icon">
-                            <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
-                        </svg>
-                    </a>
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="" class="nav__link">Login</a></li>
-                        <li class="nav__item"><a href="" class="nav__link">Register</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="nav__dropdown">
-                        Application
-                        <svg class="nav__icon">
-                            <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
-                        </svg>
-                    </a>
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="" class="nav__link">Mail box</a></li>
-                        <li class="nav__item"><a href="" class="nav__link">Notificatios</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="nav__dropdown">
-                        Reports
-                        <svg class="nav__icon">
-                            <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
-                        </svg>
-                    </a>
-
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="" class="nav__link">Sales</a></li>
-                        <li class="nav__item"><a href="" class="nav__link">Monthly</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="nav__dropdown">
-                        Forms & Buttons
-                        <svg class="nav__icon">
-                            <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
-                        </svg>
-                    </a>
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="" class="nav__link">Buttons</a></li>
-                        <li class="nav__item"><a href="" class="nav__link">Forms</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="nav__dropdown">
-                        Sana All
-                        <svg class="nav__icon">
-                            <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
-                        </svg>
-                    </a>
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="" class="nav__link">Buttons</a></li>
-                        <li class="nav__item"><a href="" class="nav__link">Forms</a></li>
-                    </ul>
-                </li>
+                
             </ul>
         </div>
         <main class="container main">
@@ -311,6 +259,9 @@
     <script>
         const eg_toggler = document.querySelector('.navbar__toggler');
         const eg_navbar_list = document.querySelector('.navbar__list');
+        const eg_sidebar = document.querySelector('.sidebar');
+
+        const eg_main = document.querySelector('.main');
         eg_toggler.addEventListener('click', () => {
             eg_navbar_list.classList.toggle('show');
             eg_toggler.classList.toggle('show');
@@ -318,13 +269,23 @@
 
         const eg_nav_dropdown = document.querySelectorAll('.nav__dropdown');
         eg_nav_dropdown.forEach((eg_item) => {
-            
             eg_item.addEventListener('click', (e) => {
                 e.preventDefault();
-                eg_item.nextElementSibling.classList.toggle('show')
-                eg_item.children[0].classList.toggle('show');
+                eg_item.nextElementSibling.classList.toggle('show');
+                eg_item.children[1].classList.toggle('show');
             });
         });
+
+
+        const eg_sidebar_toggler = document.querySelector('.sidebar-toggler');
+
+        eg_sidebar_toggler.addEventListener('click', (e)=> {
+            e.preventDefault();
+            eg_sidebar.classList.toggle('hide');
+            eg_sidebar_toggler.classList.toggle('hide');
+            eg_main.classList.toggle('expand');
+        })
+
         
     </script>
 </body>

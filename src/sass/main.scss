@@ -18,6 +18,11 @@
 
 .main {
   padding: 5.8rem 0 0 25rem;
+  z-index: -1;
+
+  &.expand {
+    padding-left: 7rem;
+  }
 }
 
 .child {
