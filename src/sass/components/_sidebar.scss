@@ -31,11 +31,12 @@
     &::-webkit-scrollbar-thumb:hover {
         background: grey;
         width: 10px;
+        
     }
 
     &.hide {
-        width: 4rem;
-
+        width: 2.2rem;
+        padding: 0;
         .nav__dropdown {
             display: none;
         }
@@ -52,12 +53,12 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    height: 3rem;
-    width: 3rem;
+    height: 2.4rem;
+    width: 2.4rem;
     border-radius: 6rem;
     border: 1px solid $border-color;
     position: fixed;
-    left: 23.5rem;
+    left: 23.7rem;
     top: 7rem;
     z-index: 1000;    
 
@@ -71,7 +72,8 @@
     }
 
     &.hide {
-        left: 2.5rem;        
+        left: 1rem;
+        transform: rotate(-180deg);
     }
 }
 
@@ -97,11 +99,7 @@
 
         & :nth-child(1) {
             margin: 0 1rem;
-            transition: all .2s ease;
             color: lighten($dark, 30) ;
-            &.show {
-                transform: rotate(-180deg);
-            }
         }
 
         & :nth-child(3) {
@@ -119,8 +117,8 @@
     }
 
     &__list {
-        padding-left:1.5rem;
-        margin-left: 2.5rem;
+        padding-left:2rem;
+        margin-left: 1.6rem;
         border-left: 2px solid rgba($primary-color, .10);
         display: none;
         transition: all .3s ease;

@@ -62,6 +62,89 @@
                         <li class="nav__item"><a href="" class="nav__link">Minimal</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#" class="nav__dropdown">
+                        <svg class="nav__icon_temp">
+                            <use xlink:href="images/sprite.svg#icon-folder"></use>
+                        </svg>
+                        <span class="nav__text">
+                            Data Entry
+                        </span>
+                
+                
+                        <svg class="nav__icon">
+                            <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="" class="nav__link">Users</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Employee</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Staff</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="nav__dropdown">
+                        <svg class="nav__icon_temp">
+                            <use xlink:href="images/sprite.svg#icon-folder"></use>
+                        </svg>
+                        <span class="nav__text">
+                            Forms & Buttons
+                        </span>
+                
+                
+                        <svg class="nav__icon">
+                            <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="" class="nav__link">Buttons</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Advanced Forms</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Forms</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Date Picker</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="nav__dropdown">
+                        <svg class="nav__icon_temp">
+                            <use xlink:href="images/sprite.svg#icon-folder"></use>
+                        </svg>
+                        <span class="nav__text">
+                            Sana All
+                        </span>
+                
+                
+                        <svg class="nav__icon">
+                            <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="" class="nav__link">Buttons</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Advanced Forms</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Forms</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Date Picker</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="nav__dropdown">
+                        <svg class="nav__icon_temp">
+                            <use xlink:href="images/sprite.svg#icon-folder"></use>
+                        </svg>
+                        <span class="nav__text">
+                            Sample Lang
+                        </span>
+                
+                
+                        <svg class="nav__icon">
+                            <use xlink:href="images/sprite.svg#icon-chevron-small-down"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="" class="nav__link">Buttons</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Advanced Forms</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Forms</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Date Picker</a></li>
+                    </ul>
+                </li>
                 
             </ul>
         </div>
@@ -274,7 +357,7 @@
             eg_item.addEventListener('click', (e) => {
                 e.preventDefault();
                 eg_item.nextElementSibling.classList.toggle('show');
-                eg_item.children[1].classList.toggle('show');
+                eg_item.children[2].classList.toggle('show');
             });
         });
 
@@ -286,11 +369,12 @@
             eg_sidebar.classList.toggle('hide');
             eg_sidebar_toggler.classList.toggle('hide');
             eg_main.classList.toggle('expand');
-
             eg_nav_dropdown.forEach((eg_item) => {
                 eg_item.nextElementSibling.classList.remove('show');
+                eg_item.children[2].classList.remove('show');
             });
-        })
+        });
+
 
         
     </script>
